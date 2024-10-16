@@ -121,11 +121,134 @@
 // let boys=["darshan","sudeep","dananjay","ambareesh","vishnu"];
 // console.log(boys.sort());  
 
-let months=["jan","feb","march","april"];
-console.log(months.splice(0,1,"dec"));
-console.log(months);
+// let months=["jan","feb","march","april"];
+// console.log(months.splice(0,1,"dec")); 
+// console.log(months);
 
 
+// let name1=prompt("Enter the name");
+
+// if(name1==vinay){
+//     console.log("Avna gandu nan maga ");
+
+// }
+
+// else if(name1==sujith){
+//     console.log("Ayena 4 jokulena amme");
+
+// }
 
 
+// else if(name1==poorvik){
+//     console.log("ayena bolimage");
+
+// }
+
+// else{
+//     console.log("yaro gothilla ppa dava");
+// }
+
+
+// let req=prompt("enter an value")
+//   if
+//     (req=="prajwal"){
+//         console.log("ayena malla maari  ");
+//     }
+
+//     else if(req=="sanjay"){
+//         console.log("avna gandu nan maga");
+//     }
+//     else if(req=="vinay"){
+//         console.log("avna gay nan maga");
+//     }
+
+//     else if(req=="sevanth"){
+//         console.log("avna bolimaga");
+//     }
+
+//     else if(req=="prjwal"){
+//         console.log("chutiya");
+//     }
+
+//     else if(req=="poorvik"){
+//         console.log("kowde ke baal");
+//     }
+
+//     else if(req=="harshith"){
+//         console.log("lolando ke lund");
+//     }
+
+//     else if(req=="shashank"){
+//         console.log("bvc");
+//     }
+    
+    
+//     else if(req=="shivakumar"){
+//         console.log("lowde ke baal");
+//     }
+
+
+// let fruits=["mango","orenge","apple","pinaple"];
+// console.log(fruits.sort());
+
+// let months=["jan","feb","march","april"];
+// console.log(months.splice(0,2,"aug","july"))
+//   console.log(months)
+
+// let lang=["c#","c++","python","java","javascript","php"];
+// console.log(lang);
+//  console.log(lang.reverse().indexOf("javascript"));
+
+
+// let num=[[1,2],[3,4],[5,6],[7,8]];
+// console.log(num);
+
+//    let game=[["x",null,"o"],[null,"x",null],["o",null,"x"]];
+//    console.log(game);
+
+
+// let arr=[7,9,0,-2];
+// let n=3;
+// console.log(arr.slice(0,n));
+
+// let num=[7,9,0,-2];
+// let n=3;
+// console.log(num.slice(num.length-n));
+
+
+//  let str=prompt("")
+//  if(str.length==0){
+//     console.log("String is empty ");
+
+//  }
+
+//  else{
+//     console.log("string have a valuve")
+//  }
+
+    
+// let chaa="ApnAcollege";
+// let idx=3;
+// if(chaa[idx]==chaa[idx].toLowerCase()){
+//     console.log("charecter is toLowerCase")
+// }
+
+// else{
+//     console.log("charecter is not lowercase");
+// }
+
+// let str=prompt("plese enter a string");
+// console.log(`orignal string=${str}`);
+// console.log(`string without spaces=${str.trim()}`);
+
+let arr=["hello","a",23,64,99,-6];
+let item=100;
+
+if(arr.indexOf(item)!=-1){
+    console.log("element exists in array");
+    
+}
+else{
+    console.log("element doesn't exists in array");
+}
 
