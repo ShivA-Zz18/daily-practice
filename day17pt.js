@@ -98,13 +98,97 @@
 // }
 
 
-let heroes=[["iron man","super man","spider man","thor"],
-["wonder women","splash","jakichan"]];
+// let heroes=[["iron man","super man","spider man","thor"],
+// ["wonder women","splash","jakichan"]];
 
- for(i=0;i<heroes.length;i++){
-   console.log(i,heroes[i],heroes[i].length);
+//  for(i=0;i<heroes.length;i++){
+//    console.log(i,heroes[i],heroes[i].length);
 
-   for(let j=0;j<heroes[i].length;j++){
-      console.log(`j=${j},${heroes[i],[j]}`) ;
-   }
- } 
+//    for(let j=0;j<heroes[i].length;j++){
+//       console.log(`j=${j},${heroes[i],[j]}`) ;
+//    }  
+//  } 
+
+
+//  let student=[["shiva",65],["sevanth", 90],["samyagdha", 80]];
+//  for(let i=0;i<student.length;i++){
+// console.log(`info of student${i+1}`);
+//   for(let j=0;j<student[i].length;j++){
+//     console.log(student[i][j]);
+//   }
+//  }
+
+
+//  let fruits=["mango","apple","banana","pinaple","pappaya"];
+//  for(purts of fruits){
+//   console.log(purts);
+//  }
+  
+// for ( spel of "apnacollege"){
+//   console.log(spel);
+// }
+
+
+// let marvels=[["superman","spiderman","thor"],["jangly","sparks","jilebiking"]];
+// for(list of marvels){
+//   for(names of list ){
+//     console.log(names);
+//   }
+   
+// }   
+
+
+// let names=[
+//   ["sevantha","sanjaya","sumantha"],
+//   ["manya","adithi","janani"]
+// ];
+
+// for(boys of names){
+//   for(all of boys){
+//     console.log(all);
+//   }
+// }
+
+
+ let todo=[];
+ req=prompt("Enter your choice");
+
+ while(true){
+  if(req=="quit"){
+    console.log("Quiting the app");
+    break;
+    
+  }
+  if(req=="list"){
+    console.log("------------------");
+    for(let i=0;i<todo.length;i++){
+      console.log(i,todo[i]);
+      
+    }
+    console.log("------------------");
+  }
+
+  else if(req=="add"){
+    let task=prompt("Enter the sujjestion");
+   todo.push(task);
+    console.log("task added");
+  }
+
+
+
+  else if(req=="delete"){
+    let idx=prompt("plese enter the index to delete");
+    todo.splice(idx,1);
+    console.log("task deleted");
+  }
+
+  else{
+    console.log("invalid input");
+    
+  }
+  req=prompt("Enter your choice");
+ }
+
+ 
+
+
