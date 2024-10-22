@@ -120,9 +120,9 @@
 //   console.log(classinfo);
 
 
+// math methods:
 
-
-console.log(Math.abs(-10.3));
+// console.log(Math.abs(-10.3));
 
 // console.log(Math.pow(10,3));
 
@@ -135,11 +135,73 @@ console.log(Math.abs(-10.3));
 
 
 
+// console.log(Math.floor(Math.random()*10)+1);
+
+//  console.log(Math.floor(Math.random()*100)+1);
+
+//  console.log(Math.floor(Math.random()*5)+1);
+ 
+ 
+//  console.log(Math.floor(Math.random()*5)+20);
 
 
+// const max = prompt("Enter a  max random number");
 
+// const random = Math.floor(Math.random()*max)+1;
 
+// let guess = prompt("Enter your guess");
+
+// while(true){
+//     if(guess=="quit"){
+//         console.log("you quit the game ");
+//         break;
+//     }
+//  if(guess==random){
+//     console.log("your guess was right!..congrats!! random number",random);
+//     break;
+// }
+
+// else if(guess>random){
+//     guess=prompt(" hint:your guess was large plese enter a small number");
+//     break;
+// }
+
+// else {
+//     guess=prompt("your guess was too small");
   
+// }
+
+// }
+
+
+
+console.log(Math.floor(Math.random()*6)+1);
+
+
+
+let car={
+    name:"maaruthi",
+    model:800,
+    color:["red","green","yello"]
+};
+
+console.log(car.name);
+
+
+
+let person={
+    name1:"shahin",
+    age:18,
+    city:"mumbai"
+};
+
+
+console.log(person.city="new york",person.country="united states");
+console.log(person);
+
+
+
+   
 
 
 
