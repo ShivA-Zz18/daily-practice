@@ -213,3 +213,130 @@
 // }
 
 
+// for(let i=2;i<15;i=i+2){
+//     console.log(i);
+    
+// }
+
+// for(let i=10;i>=1;i--){
+//     console.log(i);
+    
+// }
+
+
+// for(let i=5;i<=50;i=i+5){
+//     console.log(i);
+// }
+
+
+// let num=prompt("Enter a number");
+// num=parseInt(num);
+
+// for(let i=num;i<=num*10;i=i+num){
+//     console.log(i);
+    
+// }
+
+
+// let i=1;
+
+// while(i<=10){
+//     console.log(i);
+//     i++
+    
+// }
+
+
+
+// let favmovie="avathar";
+
+// guess=prompt("Enter a movie name");
+
+// if(guess==""){
+//     console.log("wrong enter again");
+    
+// }
+
+//  if(guess==favmovie){
+//     console.log("hurey you have gusssed the movie");
+    
+// }
+
+//  if(guess!==favmovie){
+//     console.log("you have a chance try again !");
+    
+// }
+
+
+
+
+// const favmovie="Bhahubali";
+
+// guesss=prompt("Enter a  movie name");
+
+// while (guesss!==favmovie && guesss!=="quit") {
+   
+//     guesss=prompt("Wrong guess! plese try again");
+    
+// }
+
+// if (guesss==favmovie) {
+//     console.log("Hurrey !!  you have guessed the movie name");
+    
+// }
+
+// else{
+//     console.log("you quit the game");
+    
+// }
+
+
+console.log("To Do APP");
+
+
+
+let todo=[];
+
+let req=prompt("plesse enter your request");
+
+while (true) {
+    
+ if (req=="quit") {
+        console.log("exiting");
+        break; 
+    }   
+
+    if(req=="list"){
+        console.log("===========");
+        for (let i = 0; i< todo.length; i++) {
+            console.log(i,todo[i]);  
+        }
+        console.log("===========");
+        
+    }
+
+    else if(req=="add"){
+        let task=prompt("Enter the task you want to add");
+        todo.push(task);
+console.log("task added suscessfully !");
+
+    }
+    else if(req=="delete"){
+let idx=prompt("Enter the task index");
+todo.splice(idx,1);
+console.log("task deleted");
+
+    }
+
+    else{
+        console.log("invalid choice");
+        
+    }
+
+    req=prompt("plese enter your request");
+    }
+    
+
+
+
+
