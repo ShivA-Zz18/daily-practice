@@ -291,52 +291,175 @@
 // }
 
 
-console.log("To Do APP");
+// console.log("To Do APP");
 
 
 
-let todo=[];
 
-let req=prompt("plesse enter your request");
 
-while (true) {
+// let todo=[];
+
+// let req=prompt("plesse enter your request");
+
+// while (true) {
     
- if (req=="quit") {
-        console.log("exiting");
-        break; 
-    }   
+//  if (req=="quit") {
+//         console.log("exiting");
+//         break; 
+//     }   
 
-    if(req=="list"){
-        console.log("===========");
-        for (let i = 0; i< todo.length; i++) {
-            console.log(i,todo[i]);  
-        }
-        console.log("===========");
+//     if(req=="list"){
+//         console.log("===========");
+//         for (let i = 0; i< todo.length; i++) {
+//             console.log(i,todo[i]);  
+//         }
+//         console.log("===========");
         
-    }
+//     }
 
-    else if(req=="add"){
-        let task=prompt("Enter the task you want to add");
-        todo.push(task);
-console.log("task added suscessfully !");
+//     else if(req=="add"){
+//         let task=prompt("Enter the task you want to add");
+//         todo.push(task);
+// console.log("task added suscessfully !");
 
-    }
-    else if(req=="delete"){
-let idx=prompt("Enter the task index");
-todo.splice(idx,1);
-console.log("task deleted");
+//     }
+//     else if(req=="delete"){
+// let idx=prompt("Enter the task index");
+// todo.splice(idx,1);
+// console.log("task deleted");
 
-    }
+//     }
 
-    else{
-        console.log("invalid choice");
+//     else{
+//         console.log("invalid choice");
         
-    }
+//     }
 
-    req=prompt("plese enter your request");
-    }
+//     req=prompt("plese enter your request");
+//     }
+
+
+    
+// let todo = [];
+
+// while (true) {
+//   let req = prompt("Please enter your request");
+
+//   switch (req) {
+//     case "quit":
+//       console.log("Exiting");
+//       break;
+
+//     case "list":
+//       console.log("===========");
+//       for (let i = 0; i < todo.length; i++) {
+//         console.log(`${i}: ${todo[i]}`);
+//       }
+//       console.log("===========");
+//       break;
+
+//     case "add":
+//       let task = prompt("Enter the task you want to add");
+//       todo.push(task);
+//       console.log("Task added successfully!");
+//       break;
+
+//     case "delete":
+//       let idx = prompt("Enter the task index");
+//       todo.splice(idx, 1);
+//       console.log("Task deleted");
+//       break;
+
+//     default:
+//       console.log("Invalid choice");
+//   }
+// }
+
+
+
+
+
+// let array=[1,2,3,4,5,6,2,3];
+
+// let num=3;
+
+// for (let i = 0; i < array.length; i++) {
+//     if ( array[i]==num) {
+
+//         array.splice(i,1);
+//     }
     
 
+    
+// }
+// console.log(array);
+
+
+
+// let number=256789;
+
+// let count=0;
+
+// let copy=number;
+
+// while (copy>0) {
+//     count++;
+
+//     copy=Math.floor(copy/10);
+    
+// }
+
+// console.log(count);
+
+
+// let num=123456;
+
+// let sum=0;
+
+// let copy=Num;
+
+// while (copy>0) {
+//     digit=copy%10;
+//     sum+=digit;
+//     copy=Math.floor(copy/10);
+    
+// }
+
+// console.log(sum);
+
+
+// let n=10;
+// let fact=1;
+
+// for(let i=1;i<=n;i++){
+//     fact *=i;
+
+// }
+// console.log(`factorial of ${n} is ${fact}`);
+
+
+
+// let arr=[2,4,6,8,10,3,4,5];
+
+// let largest=0;
+
+// for(let i=0;i<=arr.length;i++){
+//     if(largest<arr[i]){
+//         largest=arr[i];
+//     }
+// }
+
+// console.log(largest);
+
+
+
+
+
+
+
+// console.log( Math.floor(Math.random()*100)+1);
+
+console.log( Math.floor(Math.random()*5)+1);
 
 
 
