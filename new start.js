@@ -459,7 +459,246 @@
 
 // console.log( Math.floor(Math.random()*100)+1);
 
-console.log( Math.floor(Math.random()*5)+1);
+// console.log( Math.floor(Math.random()*5)+1);
+
+
+
+// let max = prompt("Enter a max number");
+
+// let random = Math.floor(Math.random()*max)+1;
+// console.log(random);
+
+ 
+// let guess=prompt("Enter a random number");
+
+
+// while (true) {
+   
+//     if (guess == random) {
+//       console.log("You have guessed the random number number was:",random);
+//         break;
+//     }
+
+//      if (guess=="quit") {
+//         console.log("Quitting the game......!");
+//         break;
+//      }
+
+//      else if(guess<random){
+//        guess= prompt("Hint: your guess was too samll plese try again! "); 
+//      }
+//      else{
+//         guess=prompt(" Hint: your guess was too large! plese try again")
+//      }
+  
+// }
+
+
+// let max =prompt("Enter a max number");
+
+// let random=Math.floor(Math.random()*max)+1;
+
+// // console.log(random);
+
+// while (true) {
+
+//   let guess=prompt(`Enter a random number`);
+
+//   switch (true) {
+//     case guess==random:console.log(`you have guessed the random number congrats! random number is: ${random}`);
+//       break;
+
+//       case guess=="quit":console.log("Quitting the gane");
+//       break;
+
+//       case guess<random:console.log("Hint:your guess is too samll plese try again!");
+//       break;
+
+//       case guess>random:console.log("Hint:your guess is too large plese try again!");
+//       break;
+
+  
+//     default:console.log("invalid input Enter a number or a quit to exit");
+    
+//   }
+
+//   if (guess=="quit"|| guess==random) {
+//     break;
+    
+//   }
+  
+// }
+
+
+// let max=prompt("Enter a maximum number");
+
+// let random=Math.floor(Math.random()*max)+1;
+
+// console.log(random);
+
+
+// while (true) {
+//  let guess=prompt("Guess the random number");
+
+//   switch (true) {
+//     case guess=="quit":console.log("Quitting the game");
+//       break;
+
+//       case guess==random:console.log(`you have guessed the random number congrats!  random number is:   ${random} `);
+//       break;
+
+   
+//   }
+
+//   if (guess=="quit"|| guess==random) {
+//         break;
+        
+//       }
+  
+// }
+
+
+
+
+// let secret =Math.floor(Math.random()*100)+1;
+// // console.log(secret);
+
+
+// let guess;
+// let attempt=0;
+
+
+// while (guess!==secret) {
+//    guess =parseInt(prompt("Enter a number between 1-100: "));
+
+//   attempt++;
+
+//   if (guess<secret) {
+//     alert("too small");
+    
+//   }
+
+//   else if(guess > secret){
+//     alert("too large");
+//   }
+   
+//   else if(guess=="quit"){
+// console.log("quitting");
+// break;
+
+//   }
+  
+// }
+
+
+
+// alert(`Congratulations! You guessed the number in ${attempt} attempts.`);
+
+
+// let user;
+// let computer;
+// let random;
+
+// user=prompt(" enter your choice");
+
+// computer=Math.floor((Math.random()*10))+1;
+
+// alert(`Computer chose: ${computer}`);
+
+// if (computer<3) {
+//     computer=("rock"); 
+// }
+
+// else if (computer<6){
+// computer=("paper");
+// }
+
+// else{
+//     computer=("siser");
+// }
+
+
+// if (computer==user) {
+//     alert("tie");
+    
+// }
+
+// else if(computer=="rock"&& user=="paper"||
+// computer=="paper"&& user=="siser"||
+// computer=="siser"&& user=="rock")
+// {
+//     alert="User wins !";
+// }
+// else{
+//     alert="computer wins"
+// }
+ 
+
+// let userChoice;
+// let computerChoice;
+
+// userChoice = prompt("Enter rock, paper, or scissors:");
+
+// computerChoice = Math.random() < 0.33 ? "rock" : Math.random() < 0.66 ? "paper" : "scissors";
+
+// 
+
+// if (userChoice === computerChoice) {
+//   alert("Tie!");
+// } else if ((userChoice === "rock" && computerChoice === "scissors") ||
+//              (userChoice === "paper" && computerChoice === "rock") ||
+//              (userChoice === "scissors" && computerChoice === "paper")) {
+//   alert("You win!");
+// } else {
+//   alert("Computer wins!");
+// }
+
+
+let user;
+let computer;
+
+user = prompt("Enter your choice (rock, paper, or scissors)");
+
+computer = Math.floor((Math.random() * 3)) + 1;
+
+if (computer == 1) {
+  computer = "rock";
+} else if (computer == 2) {
+  computer = "paper";
+} else {
+  computer = "scissors";
+}
+
+alert(`Computer chose: ${computer}`);
+
+if (computer == user) {
+  alert("Tie");
+} else if (
+  (computer == "rock" && user == "paper") ||
+  (computer == "paper" && user == "scissors") ||
+  (computer == "scissors" && user == "rock")
+) 
+{
+  alert("User wins !");
+} 
+
+else {
+  alert("Computer wins");
+}    
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
 
 
 
