@@ -55,13 +55,126 @@
 // printavg(10,20,30);
 
 
-function table(n){
+// function table(n){
    
-for(let i=n;i<=n*10;i=i+n){
-    console.log(i);
+// for(let i=n;i<=n*10;i=i+n){
+//     console.log(i);
     
+// }
+
+// }
+
+// table(10);
+
+
+
+
+// let dise=Math.floor(Math.random()*6)+1;
+
+// console.log(`dise value is:  ${dise}`);
+
+
+
+// let car={
+// model:"jemini",
+// name:"ambasider",
+// color:"black"
+// };
+
+
+// console.log(car);
+
+
+
+// let Person={
+// name:"Amith",
+// age:23,
+// city:"rajasthan"
+// };
+
+// console.log(Person);
+
+
+
+
+
+// let arr = [8, 9, 10, 1, 2, 3, 4, 5, 6, 7];
+// let num = 5;
+// //elements larger than a number num
+// function getElements(arr, num) {
+// for (let i = 0; i < arr.length; i++) {
+// if (arr[i] > num) {
+// console.log(arr[i]);
+// }
+// }
+// }
+// getElements(arr, num);
+
+
+
+
+
+// let str = "abcdabcdefgggh";
+
+// // Function to get String with all unique elements
+// function getUnique(str) {
+//   function removeDuplicates(str) {
+//     let ans = ""; 
+//     for (let i = 0; i < str.length; i++) {
+//       let currChar = str[i];
+//       if (ans.indexOf(currChar) === -1) { 
+//         ans += currChar; 
+//       }
+//     }
+//     return ans; 
+//   }
+
+//   // Call the removeDuplicates function and return the result
+//   return removeDuplicates(str); 
+// }
+
+// // Call the getUnique function and print the result
+// let uniqueStr = getUnique(str); 
+// console.log(uniqueStr); // Output: "abcdcfg"
+
+
+
+// let country = ["Australia", "Germany", "United States of America"];
+//     function longestName(country) {
+//     let ansIdx = 0;
+//     for (let i = 0; i < country.length; i++) {
+//     let ansLen = country[ansIdx].length;
+//     let currLen = country[i].length;
+//     if (currLen > ansLen) {
+//     ansIdx = i;
+//     }
+//     }
+//     return country[ansIdx];
+//     }
+//     longestName(country);
+
+//     let longestCountry = longestName(country); 
+//     console.log(longestCountry); 
+
+
+
+let str = "apnacollege";
+function countVowels(str) {
+let count = 0;
+for (let i = 0; i < str.length; i++) {
+if (
+str.charAt(i) == "a" ||
+str.charAt(i) == "e" ||
+str.charAt(i) == "i" ||
+str.charAt(i) == "o" ||
+str.charAt(i) == "u"
+) {
+count++;
+}
+}
+return count;
 }
 
-}
+let vowelCount = countVowels(str); 
+console.log(vowelCount); // Output: 4
 
-table(10);
