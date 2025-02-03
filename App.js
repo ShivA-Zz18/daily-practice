@@ -158,23 +158,111 @@
 
 
 
-let str = "apnacollege";
-function countVowels(str) {
-let count = 0;
-for (let i = 0; i < str.length; i++) {
-if (
-str.charAt(i) == "a" ||
-str.charAt(i) == "e" ||
-str.charAt(i) == "i" ||
-str.charAt(i) == "o" ||
-str.charAt(i) == "u"
-) {
-count++;
-}
-}
-return count;
-}
+// let str = "apnacollege";
+// function countVowels(str) {
+// let count = 0;
+// for (let i = 0; i < str.length; i++) {
+// if (
+// str.charAt(i) == "a" ||
+// str.charAt(i) == "e" ||
+// str.charAt(i) == "i" ||
+// str.charAt(i) == "o" ||
+// str.charAt(i) == "u"
+// ) {
+// count++;
+// }
+// }
+// return count;
+// }
 
-let vowelCount = countVowels(str); 
-console.log(vowelCount); // Output: 4
+// let vowelCount = countVowels(str); 
+// console.log(vowelCount); 
+
+
+
+// console.log("hello");
+
+// const  sum=(a,b) =>{
+//     console.log(a+b);
+    
+// }
+
+
+
+// console.log("Hello there!");
+// setTimeout(()=>{
+//     console.log("Apna college");4
+    
+// },3000);
+
+
+// console.log("Welocome to ");
+
+
+// let arr=["raju",23,"moodabidre"];
+
+// let print=function(ele){
+//     console.log(ele);
+    
+// };
+
+// arr.forEach(print);
+
+
+// let arr=["shiva","karkal"];
+
+// arr.forEach((nam)=>{
+//     console.log(nam);
+    
+// });
+ 
+
+// let arr=[{
+//     name:"bavandar",
+//     marks:93
+// },
+
+// {name:"ramulu",
+//     marks:99},
+
+// {name:"gintu",
+//  marks:92}];
+
+
+//  let gpa=arr.map((el) =>{
+// return el.marks/10;
+//  });
+
+
+
+// arr.forEach(function(st){
+//     console.log(st.marks );
+    
+// });
+
+
+// let num=[1,2,3,4,5,6,7,8,9,10];
+
+// let ans=num.filter((el)=>{
+//     return el<5;
+
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
 
