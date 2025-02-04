@@ -250,6 +250,48 @@
 
 
 
+// let Arry=[1,2,3,4,10];
+
+// let max=Arry.reduce((max,el)=>{
+//     if (max < el) {
+//         return el;
+        
+//     }else{
+//         return max;
+//     }
+// });
+
+
+// console.log(max);
+
+
+
+// let arr=[10,20,30,40];
+
+// let ans= arr.every((el)=> el % 10==0);
+
+// console.log(ans);
+
+
+let arr=[10,3,2,5,1];
+
+let min=arr.reduce((min,el)=>{
+    if (min>el) {
+        return el;
+        
+    }
+    else{
+        return min;
+    }
+})
+
+console.log(min);
+
+
+
+
+
+
 
 
 
