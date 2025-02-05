@@ -273,19 +273,111 @@
 // console.log(ans);
 
 
-let arr=[10,3,2,5,1];
+// let arr=[10,3,2,5,1];
 
-let min=arr.reduce((min,el)=>{
-    if (min>el) {
-        return el;
+// let min=arr.reduce((min,el)=>{
+//     if (min>el) {
+//         return el;
         
-    }
-    else{
-        return min;
-    }
-})
+//     }
+//     else{
+//         return min;
+//     }
+// })
 
-console.log(min);
+// console.log(min);
+
+
+// let arr =[1,2,3,4,5,6,7,9,];
+
+// ans=Math.max(...arr);
+
+// console.log(ans);
+
+
+// console.log(...arr);
+
+
+ 
+// // Define the list of fruits with their point values
+// let fruits = [
+//     { name: "Apple", points: 10 },
+//     { name: "Banana", points: 20 },
+//     { name: "Cherry", points: 30 },
+//     { name: "Date", points: 40 },
+//     { name: "Elderberry", points: 50 }
+//   ];
+  
+//   // Initialize the player's score and time limit
+//   let score = 0;
+//   let timeLimit = 60; // seconds
+  
+//   // Function to collect a fruit
+//   function collectFruit(fruit) {
+//     score += fruit.points;
+//     console.log(`Collected ${fruit.name}! Score: ${score}`);
+//   }
+  
+//   // Function to start the game
+//   function startGame() {
+//     console.log("Game started! Collect as many fruits as possible within 60 seconds.");
+//     fruits.forEach(fruit => {
+//       // Simulate the player collecting a fruit
+//       setTimeout(() => {
+//         collectFruit(fruit);
+//       }, Math.random() * timeLimit * 1000); // random delay between 0 and timeLimit seconds
+//     });
+//     setTimeout(() => {
+//       console.log("Time's up! Final score: " + score);
+//     }, timeLimit * 1000); // end the game after timeLimit seconds
+//   }
+
+
+// startGame();
+
+
+// let nums=[1,2,3,4,5];
+
+// const square = nums.map((num)=> num * num);
+
+// console.log(square);
+
+// let sum = square.reduce((acc, cur )=> acc + cur ,0);
+
+// let avg = sum / nums .length;
+
+// console.log(avg);
+
+
+
+// let numbers=[2,3,4,6,8,-2,-4];
+
+// console.log(numbers.map((Number)=> Number+5));
+
+
+
+// let strings =["adam","bob","catlyn","donald","eve"];
+
+// console.log(strings.map((strings)=> strings.toUpperCase()));
+
+
+
+// const doubleAndReturnArgs= (arr, ...args)=>[...arr,...args.map((v)=> v * 2),];
+
+// doubleAndReturnArgs([1,2,3,],4,4);
+// doubleAndReturnArgs([2],10,4);
+
+
+
+
+
+// const mergeObj=(obj1, obj2)=>({...obj1,...obj2});
+
+// mergeObj ({a: 1,  b:2},{c:3,d:4});
+
+
+
+
 
 
 
