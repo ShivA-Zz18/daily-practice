@@ -654,46 +654,146 @@
 // }
 
 
-let user;
-let computer;
+// let user;
+// let computer;
 
-user = prompt("Enter your choice (rock, paper, or scissors)");
+// user = prompt("Enter your choice (rock, paper, or scissors)");
 
-computer = Math.floor((Math.random() * 3)) + 1;
+// computer = Math.floor((Math.random() * 3)) + 1;
 
-if (computer == 1) {
-  computer = "rock";
-} else if (computer == 2) {
-  computer = "paper";
-} else {
-  computer = "scissors";
-}
+// if (computer == 1) {
+//   computer = "rock";
+// } else if (computer == 2) {
+//   computer = "paper";
+// } else {
+//   computer = "scissors";
+// }
 
-alert(`Computer chose: ${computer}`);
+// alert(`Computer chose: ${computer}`);
 
-if (computer == user) {
-  alert("Tie");
-} else if (
-  (computer == "rock" && user == "paper") ||
-  (computer == "paper" && user == "scissors") ||
-  (computer == "scissors" && user == "rock")
-) 
-{
-  alert("User wins !");
-} 
+// if (computer == user) {
+//   alert("Tie");
+// } else if (
+//   (computer == "rock" && user == "paper") ||
+//   (computer == "paper" && user == "scissors") ||
+//   (computer == "scissors" && user == "rock")
+// ) 
+// {
+//   alert("User wins !");
+// } 
 
-else {
-  alert("Computer wins");
-}    
-
-
+// else {
+//   alert("Computer wins");
+// }    
 
 
 
+// let word = "secret";
+// let guesses = 6;
+// let guessedWord = Array(word.length).fill("_");
+// let lettersGuessed = [];
+
+// while (guesses > 0 && guessedWord.includes("_")) {
+//   alert(guessedWord.join(" "));
+
+//   let guess = prompt("Guess a letter:").toLowerCase();
+
+//   if (lettersGuessed.includes(guess)) {
+//     alert("You already guessed that letter!");
+//   } else {
+//     lettersGuessed.push(guess);
+
+//     if (word.includes(guess)) {
+//       for (let i = 0; i < word.length; i++) {
+//         if (word[i] === guess) {
+//           guessedWord[i] = guess;
+//         }
+//       }
+//     } else {
+//       guesses--;
+//       alert(`Incorrect! ${guesses} guesses remaining.`);
+//     }
+//   }
+// }
+
+// if (guessedWord.includes("_")) {
+//   alert(`Game over! The word was ${word}.`);
+// } else {
+//   alert("Congratulations! You guessed the word.");
+// }
 
 
 
 
+// let numberToGuess = Math.floor(Math.random() * 100) + 1;
+// let attempts = 10;
+
+// while (attempts > 0) {
+//   let userGuess = parseInt(prompt("Guess the number between 1 and 100:"));
+
+//   if (userGuess === numberToGuess) {
+//     alert("Congratulations! You guessed the number.");
+//     break;
+//   } else if (userGuess > numberToGuess) {
+//     alert("Too high!");
+//   } else {
+//     alert("Too low!");
+//   }
+
+//   attempts--;
+//   alert(`You have ${attempts} attempts remaining.`);
+// }
+
+// if (attempts === 0) {
+//   alert(`Game over! The number was ${numberToGuess}.`);
+// }
+
+
+
+
+
+
+// let choices = ["rock", "paper", "scissors"];
+// let userChoice = prompt("Enter rock, paper, or scissors:").toLowerCase();
+// let computerChoice = choices[Math.floor(Math.random() * 3)];
+
+// alert(`Computer chose: ${computerChoice}`);
+
+// if (userChoice === computerChoice) {
+//   alert("It's a tie!");
+// } else if (
+//   (userChoice === "rock" && computerChoice === "scissors") ||
+//   (userChoice === "paper" && computerChoice === "rock") ||
+//   (userChoice === "scissors" && computerChoice === "paper")
+// ) {
+//   alert("You win!");
+// } else {
+//   alert("You lose!");
+// }
+
+
+
+// // DELTA/NEW START/quiz_game.js
+
+// let questions = [
+//   { question: "What is the capital of France?", answer: "paris" },
+//   { question: "What is 2 + 2?", answer: "4" },
+//   { question: "What is the color of the sky?", answer: "blue" }
+// ];
+
+// let score = 0;
+
+// for (let i = 0; i < questions.length; i++) {
+//   let userAnswer = prompt(questions[i].question).toLowerCase();
+//   if (userAnswer === questions[i].answer) {
+//     score++;
+//     alert("Correct!");
+//   } else {
+//     alert(`Wrong! The correct answer is ${questions[i].answer}.`);
+//   }
+// }
+
+// alert(`You scored ${score} out of ${questions.length}.`);
   
   
 
