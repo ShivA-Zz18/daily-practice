@@ -50,35 +50,89 @@ console.log("HEllo");
 
 
 
-let btn =  document.querySelector("button");
+// let btn =  document.querySelector("button");
 
-btn.addEventListener("click",function(){
-    let h3= document.querySelector("h3");
-    let randomColor = getRandomColor();
-    h3.innerText= randomColor;
+// btn.addEventListener("click",function(){
+//     let h3= document.querySelector("h3");
+//     let randomColor = getRandomColor();
+//     h3.innerText= randomColor;
 
+//     let div = document.querySelector("div");
+//     div.style.backgroundColor= randomColor;
 
-    let div = document.querySelector("div");
-    div.style.backgroundColor= randomColor;
-
-    console.log("Color Updated");
+//     console.log("Color Updated");
     
+// });
 
+
+//     function getRandomColor(){
+//     let red=Math.floor(Math.random()*255);
+//     let green=Math.floor(Math.random()*255);
+//     let blue=Math.floor(Math.random()*255);
+
+
+//     let Color = `rgb(${red},${green},${blue})`;
+//     return Color;
+// }
+
+// let p = document.querySelector("p");
+
+// p.addEventListener("click", function(){
+//     console.log("paragraf was cliked");
+    
+// })
+
+
+
+// let div = document.querySelector(".box");
+
+// div.addEventListener("mouseenter",function(){
+//     console.log("Mouse entered");
+    
+// })
+
+
+
+  
+// let btn = document.querySelector("button");
+
+// btn.addEventListener("keydown",function(){
+//     console.log("button was clicked");
+    
+// })
+
+
+let inp= document.querySelector("input");
+
+
+inp.addEventListener("keyup",function(event){
+    console.log(event);
+    // console.log(`key: ${event.key}`);
+    console.log(`code: ${event.code}`);
+    
+    // console.log("key was pressed");
+
+
+    if (event.code=="Arrowup") {
+        console.log("Charecter mooving forward");
+        
+    }else if (event.code=="ArrowDown") {
+        console.log("Charecter mooving backwaed");
+        
+    }else if (event.code=="ArrowLeft") {
+        console.log("Charecter mooving left");
+        
+    }else if (event.code=="ArrowRight") {
+        console.log("Charecter mooving right");
+        
+    }
+    
 });
 
 
 
-function getRandomColor(){
-    let red=Math.floor(Math.random()*255);
-    let green=Math.floor(Math.random()*255);
-    let blue=Math.floor(Math.random()*255);
+ 
 
-
-    let Color = `rgb(${red},${green},${blue})`;
-    return Color;
-}
-
-  
 
 
 
