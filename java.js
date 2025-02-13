@@ -102,33 +102,41 @@ console.log("HEllo");
 // })
 
 
-let inp= document.querySelector("input");
+// let inp= document.querySelector("input");
 
 
-inp.addEventListener("keyup",function(event){
-    console.log(event);
-    // console.log(`key: ${event.key}`);
-    console.log(`code: ${event.code}`);
+// inp.addEventListener("keyup",function(event){
+//     console.log(event);
+//     // console.log(`key: ${event.key}`);
+//     console.log(`code: ${event.code}`);
     
-    // console.log("key was pressed");
+//     // console.log("key was pressed");
 
 
-    if (event.code=="Arrowup") {
-        console.log("Charecter mooving forward");
+//     if (event.code=="Arrowup") {
+//         console.log("Charecter mooving forward");
         
-    }else if (event.code=="ArrowDown") {
-        console.log("Charecter mooving backwaed");
+//     }else if (event.code=="ArrowDown") {
+//         console.log("Charecter mooving backwaed");
         
-    }else if (event.code=="ArrowLeft") {
-        console.log("Charecter mooving left");
+//     }else if (event.code=="ArrowLeft") {
+//         console.log("Charecter mooving left");
         
-    }else if (event.code=="ArrowRight") {
-        console.log("Charecter mooving right");
+//     }else if (event.code=="ArrowRight") {
+//         console.log("Charecter mooving right");
         
-    }
+//     }
+    
+// });
+
+
+let form = document.querySelector("form");
+
+form.addEventListener("submit",function(event){
+    event.preventDefault();
+    alert("form submitted");
     
 });
-
 
 
  
