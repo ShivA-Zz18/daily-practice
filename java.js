@@ -130,16 +130,30 @@ console.log("HEllo");
 // });
 
 
-let form = document.querySelector("form");
 
-form.addEventListener("submit",function(event){
-    event.preventDefault();
-    alert("form submitted");
+
+// let form = document.querySelector("form");
+
+// form.addEventListener("submit",function(event){
+//     event.preventDefault();
+  
     
-});
+// });
 
 
- 
+ let form= document.querySelector("form");
+
+ form.addEventListener("submit",function(event){
+    event.preventDefault();
+
+
+    let input=document.querySelector("input");
+
+    
+        console.log(input.value);
+        
+
+ })
 
 
 
