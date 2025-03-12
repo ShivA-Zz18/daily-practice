@@ -46,26 +46,67 @@
 
 
 
-let bulb=document.querySelector("#bulb");
+// let bulb=document.querySelector("#bulb");
 
-let btn = document.querySelector("button");
+// let btn = document.querySelector("button");
 
-let flag=0;
+// let flag=0;
 
 
 
-btn.addEventListener("click",function(){
+// btn.addEventListener("click",function(){
 
-    if(flag==0){
+//     if(flag==0){
 
-    bulb.style.backgroundColor="yellow";
-    flag=1;
-}
-else{
-    bulb.style.backgroundColor="transparent";
-    flag=0;
-}
+//     bulb.style.backgroundColor="yellow";
+//     flag=1;
+// }
+// else{
+//     bulb.style.backgroundColor="transparent";
+//     flag=0;
+// }
+// });
+
+
+let h5=document.querySelector("h5");
+
+let add= document.querySelector("#add");
+
+// let remove=document.querySelector("#remove");
+
+let check=0;
+
+
+
+
+add.addEventListener("click",function(){
+    
+    if(check==0){
+        console.log("huuuuuu");
+         h5.innerHTML="Friends"
+    h5.style.color="green"
+        check=1;
+         add.innerHTML="remove Friend"
+    }
+    else{
+        add.innerHTML="add Friend"
+
+        console.log("heeeee");
+         h5.innerHTML="Unfriend"
+    h5.style.color="red"
+        check=0;
+    }
+   
 });
+
+// remove.addEventListener("click",function(){
+// h5.innerHTML="Unfriend";
+// h5.style.color="red"
+// })
+
+
+
+
 
 
 

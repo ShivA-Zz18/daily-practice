@@ -21,7 +21,7 @@ Height:100%;
 } */
 
 
- *{ 
+ /* *{ 
 Margin:0;
 Padding:0;
 Box-sizing: border-box;
@@ -40,15 +40,87 @@ Height:100%;
     border-radius: 50%;
     border: 5px solid  black;
     /* background-color: yellow; */
-}
+/* } */
 
 
-button{
-    width: 50px;
-    height: 40px;
+/* button{ */
+    /* width: 50px; */
+    /* height: 40px; */
     /* padding: 30px; */
-    margin-top: 85%;
-    margin-left: 50%;
+    /* margin-top: 85%; */
+    /* margin-left: 50%; */
+/* } */ 
+
+
+ *{ 
+Margin:0;
+Padding:0;
+Box-sizing: border-box;
+Font-family: xyz;
+}
+
+html,body{
+Width:100%;
+Height:100%;
+}
+
+#card{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    border-radius: 20px;
 }
 
 
+body{
+    background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 25%;
+}
+
+#card img{
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    padding: 30px;
+    
+}
+
+#card h1{
+    font-size: 20px;
+    margin: 8px 0;
+    text-align: center;
+}
+
+#card h5{
+    text-align: center;
+    color: orange;
+    margin: 10px;
+}
+
+#card button{
+    background-color: cadetblue;
+    color: white;
+    font-weight: 800;
+    padding: 12px  ;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    
+   
+
+}
+
+/* #card #remove{
+    background-color:#dadada;
+    margin: 5px;
+} */
+
+img{
+    border-radius: 20%;
+}
