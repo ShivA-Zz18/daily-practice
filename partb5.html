@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+body{
+    background: #009688;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    position: relative;
+    width: 600px;
+    height: 100px;
+    overflow: hidden;
+    border-bottom: 3px solid #fff;
+}
+
+.background{
+    position: absolute;
+    animation: tree 2s linear infinite;
+}
+
+.hill{
+    position: absolute;
+    background: #4db6ac;
+    height: 60px;
+    width: 200px;
+    bottom: -30%;
+    border-radius: 50%;
+    margin-left: 50px;
+    z-index: 1;
+}
+
+.hill2{
+position: absolute;
+background: #4db6ac;
+height: 70px;
+width: 300px;
+bottom: -30%;
+border-radius: 50%;
+margin-left: 240px;
+z-index: 1;
+}
+
+.tree{
+   z-index:  1; ; 
+}
+
+.truck{
+position: absolute;
+margin-left: 50%;
+}
+
+.truck-body{
+    position: absolute;
+    z-index: 2;
+    bottom: -100px;
+}
+
+.wheels{
+    position: absolute;
+    bottom: -100px;
+    z-index: 2;
+}
+
+.truck::before{
+    position: absolute;
+    width: 25px;
+    content: "";
+    bottom: -45px;
+    z-index: 2;
+    box-shadow: -30px 28px 0 1.3px #fff;
+    animation: wind 1s infinite;
+}
+
+@keyframes tree{
+    0%{transform: translateX(600px);}
+    100%{transform: translateX(-600px);}
+}
+
+@keyframes wind{
+    0%{transform: translateY(6px);}
+}
+
+
+   </style>
+    <title>Mooving Truck</title>
+</head>
+<body>
+    <div class="container">
+        <div class="background">
+            <div class="hill"></div>
+            <div class="hill2"></div>
+            <img src="4382376_26130.svg" alt="" class="tree" style="height: 100px;">
+        </div>
+        <div class="truck">
+            <img src="truck-svgrepo-com.svg" alt="" class="truck-body" style="height: 60px;">
+            <img src="wheel-svgrepo-com.svg" alt="" class="wheels">
+        </div>
+    </div>
+</body>
+</html>
