@@ -1,0 +1,26 @@
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="hosp.css">
+    <title>Document</title>
+ </head>
+ <body>
+    <section class="section" id="appointment">
+        <h2>Book an Appointment</h2>
+        <div class="appointment">
+            <form id="appointmentForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="date" id="date" required>
+                <textarea id="issue" placeholder="Describe your issue" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="formMessage" style="margin-top: 10px; color: green;"></p>
+        </div>
+    </section>
+    <script src="hosp.js"></script> 
+ </body>
+ </html>
