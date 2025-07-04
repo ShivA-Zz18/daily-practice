@@ -881,29 +881,90 @@
 
 
 
-h1 = document.querySelector("h1");
+// h1 = document.querySelector("h1");
 
-    function changeColor(color,delay,nextColorChange) {
-        setTimeout(()=>{
-            h1.style.color=color;
-            if(nextColorChange)nextColorChange();
-        },delay)
+//     function changeColor(color,delay,nextColorChange) {
+//         setTimeout(()=>{
+//             h1.style.color=color;
+//             if(nextColorChange)nextColorChange();
+//         },delay)
+//     }
+
+//     changeColor("red",1000,()=>{
+//  changeColor("green",1000,()=>{
+//      changeColor("yellow",1000,()=>{
+//          changeColor("pink",1000,()=>{
+//     });
+//       });
+//         });
+//           });
+
+
+// async function greet(){
+//     return "hello";
+// }
+
+
+// greet().then((data)=>{
+//     console.log(data);
+// }).catch((err)=>{
+//     console.log(err);
+// });
+
+
+// function getNum(){
+//    console.log(5);
+
+// }
+
+
+// async function demo() {
+//     getNum();
+//     console.log("hello");
+    
+// }
+
+
+// fetch(url)
+
+// .then((res)=>{
+//     console.log(res);
+//     res.json().then((data)=>{
+//         console.log(data);
+//         console.log(data.fact);
+//         document.querySelector("h1").innerHTML=data.fact;
+//     });
+// })
+
+// .catch((err)=>{
+//     console.log(err);
+    
+// });
+      
+let btn=document.querySelector("button");
+
+btn.addEventListener("click",async()=>{
+    // console.log("clicked");
+    let fact = await getfacts();
+    console.log(fact);
+    let p = document.querySelector("#result");
+    p.innerText = fact;
+});
+
+   let url="https://catfact.ninja/fact";
+ 
+async function getfacts() {
+    try{
+        let res = await axios.get(url);
+       console.log(res.data.fact);
+       return res.data.fact;
+    }
+    catch(e){
+        console.log("Error",e);
+        return"no fact found";
     }
 
-    changeColor("red",1000,()=>{
- changeColor("green",1000,()=>{
-     changeColor("yellow",1000,()=>{
-         changeColor("pink",1000,()=>{
-    });
-      });
-        });
-          });
-
-
-
-
-
-
+}
 
  
 
