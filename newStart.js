@@ -952,6 +952,7 @@ btn.addEventListener("click",async()=>{
 });
 
    let url="https://catfact.ninja/fact";
+   let url2= 
  
 async function getfacts() {
     try{
@@ -965,7 +966,6 @@ async function getfacts() {
     }
 
 }
-
  
 
 
