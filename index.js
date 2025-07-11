@@ -1,12 +1,18 @@
-const figlet = require('figlet');
+const express= require("express")
 
-figlet("Hello World!!", function (err, data) {
-  if (err) {
-    console.log("Something went wrong...");
-    console.dir(err);
-    return;
-  }
-  console.log(data);
+const app=express();
+
+const port=3000;
+
+app.set("view engine","ejs");
+
+app.get("/",(req,res)=>{
+    res.render("this is home")
+  });      
+
+
+app.listen(port,()=>{
+    console.log(`listening on port ${port}`);
+    
 });
-
 
