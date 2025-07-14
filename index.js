@@ -7,12 +7,13 @@ const port=3000;
 app.set("view engine","ejs");
 
 app.get("/",(req,res)=>{
-    res.render("this is home")
+    res.render("home.ejs",{title:"Home Page",message:"Welcome to the Home Page!"});
   });      
 
-
+ 
 app.listen(port,()=>{
     console.log(`listening on port ${port}`);
     
 });
 
+  
