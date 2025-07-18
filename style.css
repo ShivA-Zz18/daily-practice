@@ -1,34 +1,18 @@
-/* body{
-    text-align: center;
-    align-items: center;
+*{
+    background-color: black;
+    color: aliceblue;
 }
 
-h3{
-    text-align: center;
+h1{
+    color: aqua;
+    font-weight: bold;
 }
 
- #Bent{
-    align-items: center;
-    text-align: center;
+#post{
+    background-color: rgb(13, 5, 5);
+}   
+
+#content{
+    color: rgb(125, 144, 144);
+    background: #000;
 }
-
-
- div{
-    height: 100px;
-    width: 500px;
-    border: 1px solid   black;
-    margin: auto;
-    margin-top: 10%;
-    text-align: center;
- }
-
-.box{
-    height: 100px;
-    width: 200px;
-    background-color: aqua;
-    border: 1px solid black;
-} */
-
-
-
-
