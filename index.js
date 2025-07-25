@@ -1,34 +1,36 @@
-const { faker } = require('@faker-js/faker');
+// index.js
+
+import { faker } from '@faker-js/faker';
 import mysql from 'mysql2/promise';
 
 const connection = await mysql.createConnection({
   host: 'localhost',
   user: 'root',
   database: 'DELTA',
-  password:'SHIVA'
+  password: 'SHIVA'
 });
 
-let  getRandomUser =()=> {
+let getRandomUser = () => {
   return {
     userId: faker.string.uuid(),
-    username: faker.internet.username(), 
+    username: faker.internet.userName(),
     email: faker.internet.email(),
     password: faker.internet.password(),
   };
 }
 
-try{
-    connection.query("SHOW TABLES",(ERR,RES)=>{
-    if (ERR) throw ERR;
-    console.log(RES);
-    
-})
+try {
+  const [rows, fields] = await connection.query("SHOW TABLES");
+  console.log(rows);
 
-}catch(ERR){
-    console.log(ERR);
-    
+} catch (ERR) {
+  console.error("An error occurred during database operation:", ERR);
 
+} finally {
+    if (connection) {
+        await connection.end();
+        console.log('Database connection closed.');
+    }
 }
 
-
-// console.log(getRandomUser());
+ 
