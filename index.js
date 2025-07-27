@@ -3,6 +3,12 @@
 import { faker } from '@faker-js/faker';
 import mysql from 'mysql2/promise';
 
+
+import express from 'express';
+const app = express();
+
+
+
 const connection = await mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -19,18 +25,30 @@ let getRandomUser = () => {
   };
 }
 
-try {
-  const [rows, fields] = await connection.query("SHOW TABLES");
-  console.log(rows);
 
-} catch (ERR) {
-  console.error("An error occurred during database operation:", ERR);
+app.get('/', async (req, res) => {
+  res.send("Fetching users...");
+});
 
-} finally {
-    if (connection) {
-        await connection.end();
-        console.log('Database connection closed.');
-    }
-}
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+
+
+
+
+// try {
+//   const [rows, fields] = await connection.query("SHOW TABLES");
+//   console.log(rows);
+
+// } catch (ERR) {
+//   console.error("An error occurred during database operation:", ERR);
+
+// } finally {
+//     if (connection) {
+//         await connection.end();
+//         console.log('Database connection closed.');
+//     }
+// }
 
  
