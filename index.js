@@ -1,162 +1,69 @@
-/**
- * Helpers.
- */
+const mongoose = require('mongoose');
 
-var s = 1000;
-var m = s * 60;
-var h = m * 60;
-var d = h * 24;
-var w = d * 7;
-var y = d * 365.25;
 
-/**
- * Parse or format the given `val`.
- *
- * Options:
- *
- *  - `long` verbose formatting [false]
- *
- * @param {String|Number} val
- * @param {Object} [options]
- * @throws {Error} throw an error if val is not a non-empty string or a number
- * @return {String|Number}
- * @api public
- */
 
-module.exports = function (val, options) {
-  options = options || {};
-  var type = typeof val;
-  if (type === 'string' && val.length > 0) {
-    return parse(val);
-  } else if (type === 'number' && isFinite(val)) {
-    return options.long ? fmtLong(val) : fmtShort(val);
-  }
-  throw new Error(
-    'val is not a non-empty string or a valid number. val=' +
-      JSON.stringify(val)
-  );
-};
+main().then((res)=>{
+    console.log("Database connected",res);
+    
+})
+.catch(err => console.log(err));
 
-/**
- * Parse the given `str` and return milliseconds.
- *
- * @param {String} str
- * @return {Number}
- * @api private
- */
+async function main() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/test');
 
-function parse(str) {
-  str = String(str);
-  if (str.length > 100) {
-    return;
-  }
-  var match = /^(-?(?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(
-    str
-  );
-  if (!match) {
-    return;
-  }
-  var n = parseFloat(match[1]);
-  var type = (match[2] || 'ms').toLowerCase();
-  switch (type) {
-    case 'years':
-    case 'year':
-    case 'yrs':
-    case 'yr':
-    case 'y':
-      return n * y;
-    case 'weeks':
-    case 'week':
-    case 'w':
-      return n * w;
-    case 'days':
-    case 'day':
-    case 'd':
-      return n * d;
-    case 'hours':
-    case 'hour':
-    case 'hrs':
-    case 'hr':
-    case 'h':
-      return n * h;
-    case 'minutes':
-    case 'minute':
-    case 'mins':
-    case 'min':
-    case 'm':
-      return n * m;
-    case 'seconds':
-    case 'second':
-    case 'secs':
-    case 'sec':
-    case 's':
-      return n * s;
-    case 'milliseconds':
-    case 'millisecond':
-    case 'msecs':
-    case 'msec':
-    case 'ms':
-      return n;
-    default:
-      return undefined;
-  }
+ 
 }
 
-/**
- * Short format for `ms`.
- *
- * @param {Number} ms
- * @return {String}
- * @api private
- */
+const userSchema = new mongoose.Schema({
+  name: String,
+  eamil:String,
+  age: Number
+});
 
-function fmtShort(ms) {
-  var msAbs = Math.abs(ms);
-  if (msAbs >= d) {
-    return Math.round(ms / d) + 'd';
-  }
-  if (msAbs >= h) {
-    return Math.round(ms / h) + 'h';
-  }
-  if (msAbs >= m) {
-    return Math.round(ms / m) + 'm';
-  }
-  if (msAbs >= s) {
-    return Math.round(ms / s) + 's';
-  }
-  return ms + 'ms';
-}
+const User = mongoose.model('User', userSchema);
+const employe = mongoose.model('employe', userSchema);   //collections
 
-/**
- * Long format for `ms`.
- *
- * @param {Number} ms
- * @return {String}
- * @api private
- */
 
-function fmtLong(ms) {
-  var msAbs = Math.abs(ms);
-  if (msAbs >= d) {
-    return plural(ms, msAbs, d, 'day');
-  }
-  if (msAbs >= h) {
-    return plural(ms, msAbs, h, 'hour');
-  }
-  if (msAbs >= m) {
-    return plural(ms, msAbs, m, 'minute');
-  }
-  if (msAbs >= s) {
-    return plural(ms, msAbs, s, 'second');
-  }
-  return ms + ' ms';
-}
 
-/**
- * Pluralization helper.
- */
+User.insertMany([
+  { name: 'Alice', email: 'rajshiva@123', age: 25 },
+  { name: 'Bob', email: 'shiva@123', age: 30 },
+  { name: 'bro', email: 'shiva@123', age: 55 }
+]).then((res)=>{
+    console.log(res)
+    });
 
-function plural(ms, msAbs, n, name) {
-  var isPlural = msAbs >= n * 1.5;
-  return Math.round(ms / n) + ' ' + name + (isPlural ? 's' : '');
-}
+// User.updateOne({name:"bro"},{age:70}).then((res)=>{console.log(res)});
+
+// User.findByIdAndDelete('68b24ffeb621bb0232a27cda').then((res)=>{console.log(res)});
+
+    
+    // User.find({age:{$gte:50}}).then((data) => {
+    //     console.log(data);
+        
+    // });
+
+
+    
+
+
+
+
+// Example usage:
+// const newUser = new User({ name: 'John Doe', email: '
+
+//
+
+// const newUser = new User({ name: 'John Doe',
+//      email: 'shiva@123',
+//      age: 30 });  
+     
+
+//      const newUser2 = new User({ name: 'John Doe',
+//      email: 'shiva@123',
+//      age: 30 }); 
+
+//      newUser.save().then((res) => console.log('User saved'));
+//      newUser2.save().then((res) => console.log('User saved'));
+
+
