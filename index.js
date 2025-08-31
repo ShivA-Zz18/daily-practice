@@ -1,69 +1,45 @@
+
+const express = require('express');
+const app = express();
 const mongoose = require('mongoose');
+const Chat = require('./models/chat.js');
+const path = require("path");
 
-
-
-main().then((res)=>{
-    console.log("Database connected",res);
-    
-})
-.catch(err => console.log(err));
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, "public")));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/test');
+  try {
+    await mongoose.connect('mongodb://127.0.0.1:27017/watsapp');
+    console.log('Connected to MongoDB');
 
- 
-}
-
-const userSchema = new mongoose.Schema({
-  name: String,
-  eamil:String,
-  age: Number
-});
-
-const User = mongoose.model('User', userSchema);
-const employe = mongoose.model('employe', userSchema);   //collections
-
-
-
-User.insertMany([
-  { name: 'Alice', email: 'rajshiva@123', age: 25 },
-  { name: 'Bob', email: 'shiva@123', age: 30 },
-  { name: 'bro', email: 'shiva@123', age: 55 }
-]).then((res)=>{
-    console.log(res)
+    let chat1 = new Chat({
+      from: "Alice",
+      to: "Bob",
+      msg: "Hello, Bob!",
+      created_at: new Date()
     });
 
-// User.updateOne({name:"bro"},{age:70}).then((res)=>{console.log(res)});
+    await chat1.save();
+    console.log('Chat message saved');
+  } catch (err) {
+    console.log(err);
+  }
+}
 
-// User.findByIdAndDelete('68b24ffeb621bb0232a27cda').then((res)=>{console.log(res)});
+main().then(() => {
+  app.get("/chats", async (req, res) => {
+    let chats = await Chat.find();
+    console.log(chats);
+    res.render("index.ejs", { chats });
+  });
 
-    
-    // User.find({age:{$gte:50}}).then((data) => {
-    //     console.log(data);
-        
-    // });
+  app.get('/', (req, res) => {
+    res.send('Hello World!');
+  });
 
-
-    
-
-
-
-
-// Example usage:
-// const newUser = new User({ name: 'John Doe', email: '
-
-//
-
-// const newUser = new User({ name: 'John Doe',
-//      email: 'shiva@123',
-//      age: 30 });  
-     
-
-//      const newUser2 = new User({ name: 'John Doe',
-//      email: 'shiva@123',
-//      age: 30 }); 
-
-//      newUser.save().then((res) => console.log('User saved'));
-//      newUser2.save().then((res) => console.log('User saved'));
-
-
+  app.listen(8080, () => {
+    console.log('Server is running on port 8080');
+  });
+}).catch(err => console.log(err));

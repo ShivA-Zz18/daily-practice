@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Watsapp</title>
 </head>
 <body>
-    <h1 id="h1">Quora posts</h1>
+    <h1>All chats </h1>
 
-    <% for(let post of posts) { %>
-        <div>
-            <h3 id="post">@<%= post.username %></h3>
-            <h4 id="content"><%= post.content %></h4>
-        
-       
-
-            <a href="/posts/<%= post.id %>">read more</a>
+<% for (let chat of chats){ %>
+    <div class="chat">
+        <p>From : <%= chat.From %></p>
+        <div class="msg">
+<p> <%= chat.msg %></p>
+<hr>
         </div>
-    <% } %>
-
-    <br>
-    <br>
-
-    <a href="http://localhost:8080/posts/new">create new post</a>
-    
+        
+        <p>Received by  <%= chat.to %></p>
+    </div>
+<%}%>
 </body>
 </html>
+

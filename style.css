@@ -1,18 +1,15 @@
-*{
-    background-color: black;
-    color: aliceblue;
+ *{ 
+Margin:0;
+Padding:0;
+Box-sizing: border-box;
+Font-family: xyz;
 }
 
-h1{
-    color: aqua;
-    font-weight: bold;
+html,body{
+Width:100%;
+Height:100%;
 }
 
-#post{
-    background-color: rgb(13, 5, 5);
-}   
-
-#content{
-    color: rgb(125, 144, 144);
-    background: #000;
+.chat{
+    background-color: aliceblue;
 }
