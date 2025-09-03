@@ -18,8 +18,13 @@
         </div>
         
         <p>Received by  <%= chat.to %></p>
+        <p>Sent on: <%= chat.created_at.toLocaleString() %></p>
     </div>
 <%}%>
+
+<form method="get" action="/chats/new">
+    <button>new chat</button>
+</form>
 </body>
 </html>
 

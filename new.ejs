@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>new post</title>
+    <title>new chat</title>
 </head>
 <body>
-    
-    <form  method="post" action="/posts" >
-        <input type="text" placeholder="enter username" name="username">
+    <h3>write new chat</h3>
+    <form method="post" action="/chats">
+        <input type="text" name="From"  placeholder="who are you?">
+        <br>
+        <br>
+        <textarea name="msg" >write your msg hear...</textarea>
+        <br>
+        <br>
+    <input type="text" placeholder="add receiver" name="to">
     <br>
     <br>
-        <textarea name="content" id="" placeholder="wrire your post"></textarea>
-    <br>
-    <br>
-        <button>submit</button>
-    
+    <button>Create chat </button>
     </form>
 </body>
-</html>
+</html> 
